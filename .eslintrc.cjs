@@ -1,3 +1,5 @@
+const { off } = require('process');
+
 /* eslint-env node */
 require('@rushstack/eslint-patch/modern-module-resolution');
 
@@ -23,6 +25,7 @@ module.exports = {
           lang: 'ts'
         }
       }
-    ]
+    ],
+    'vue/multi-word-component-names': 'off'
   }
 };
