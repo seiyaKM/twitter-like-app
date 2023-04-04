@@ -1,17 +1,26 @@
 <template>
-  <div>
-    <h1 class="login">Login</h1>
-    <p class="login__message">Hello</p>
-    <v-btn>button</v-btn>
-  </div>
+  <v-card class="ma-auto pa-15" width="600">
+    <h1 class="login-title">TwitterLikeにログイン</h1>
+    <v-text-field
+      class="mt-8"
+      variant="outlined"
+      placeholder="ID"
+      hide-details="auto"
+      persistent-placeholder
+    ></v-text-field>
+    <v-text-field
+      class="mt-4"
+      variant="outlined"
+      placeholder="PASSWORD"
+      hide-details="auto"
+      persistent-placeholder
+    ></v-text-field>
+    <v-btn block color="primary" class="mt-8">LOGIN</v-btn>
+  </v-card>
 </template>
 
 <style scoped lang="scss">
-.login {
-  width: 600px;
-  color: red;
-  &__message {
-    color: blue;
-  }
+.login-title {
+  text-align: center;
 }
 </style>
