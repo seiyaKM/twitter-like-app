@@ -1,3 +1,11 @@
+<script setup lang="ts">
+import { useRouter } from 'vue-router';
+
+const router = useRouter();
+
+const onLogin = () => router.push({ name: 'home' });
+</script>
+
 <template>
   <v-card class="ma-auto pa-15" width="600">
     <h1 class="login-title">Login to Twitter Like</h1>
@@ -15,7 +23,7 @@
       hide-details="auto"
       persistent-placeholder
     ></v-text-field>
-    <v-btn block color="primary" class="mt-8">LOGIN</v-btn>
+    <v-btn block color="primary" class="mt-8" @click="onLogin">LOGIN</v-btn>
     <p class="mt-4">
       don't have an account? Register <router-link :to="{ name: 'signup' }">here</router-link>
     </p>
